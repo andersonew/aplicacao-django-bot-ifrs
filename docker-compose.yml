@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   web:
-    image: okteto/conda:latest
+    image: okteto/python:latest
     build:
       context: .
       dockerfile: Dockerfile
