@@ -10,5 +10,3 @@ RUN pip install Django
 RUN pip install psycopg2
 RUN pip install psycopg2-binary
 RUN pip install Pillow
-
-RUN python manage.py runserver 0.0.0.0:8080
