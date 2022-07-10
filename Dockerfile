@@ -4,13 +4,14 @@ FROM python:3.10.5
 # set working directory to /app/
 WORKDIR /app/
 
-COPY ./requirements.txt ./
-
 USER root
 
-RUN pip install --upgrade pip
-
-RUN pip install -r requirements.txt
+RUN python3 -m venv ./venv
+RUN venv\Scripts\activate.bat
+RUN pip install Django
+RUN pip install psycopg2
+RUN pip install psycopg2-binary
+RUN pip install Pillow
 
 COPY . .
 
