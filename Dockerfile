@@ -13,4 +13,4 @@ RUN pip install Pillow
 
 ADD . .
 
-RUN python manage.py runserver 0.0.0.0:8080
+RUN manage.py runserver 0.0.0.0:8080
