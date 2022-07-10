@@ -4,10 +4,10 @@ FROM python:2.7
 # set working directory to /app/
 WORKDIR /app/
 
-# copy requirements.txt to the image
-COPY requirements.txt requirements.txt
+COPY ./requirements.txt ./
 
-# install python dependencies
+USER root
+
 RUN pip install -r requirements.txt
 
 # copy code base to the image
