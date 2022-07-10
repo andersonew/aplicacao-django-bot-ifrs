@@ -66,9 +66,9 @@ WSGI_APPLICATION = 'principal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('postgres'),
-        'USER': os.environ.get('postgres'),
-        'PASSWORD': os.environ.get('postgres'),
+        'NAME': os.environ.get('ifrs'),
+        'USER': os.environ.get('anderson.direito@gmail.com'),
+        'PASSWORD': os.environ.get('123456'),
         'HOST': os.environ.get('DB_PORT_5432_TCP_ADDR', 'bancodedados'),
         'PORT': os.environ.get(5432),
     },
