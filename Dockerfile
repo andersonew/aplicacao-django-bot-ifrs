@@ -6,8 +6,6 @@ WORKDIR /app/
 
 USER root
 
-RUN python3 -m venv ./venv
-RUN venv\Scripts\activate.bat
 RUN pip install Django
 RUN pip install psycopg2
 RUN pip install psycopg2-binary
