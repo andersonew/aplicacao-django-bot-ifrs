@@ -1,8 +1,0 @@
-deploy:
-  - kubectl apply -f manifests
-
-dev:
-  web:
-    command: ["sh", "-c", "./run_web.sh"]
-    sync:
-      - .:/app
