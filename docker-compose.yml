@@ -2,7 +2,7 @@ version: '3.4'
 services:
   web:
     image: okteto/django:latest
-     build:
+    build:
       dockerfile: Dockerfile
     volumes:
       - .:/app
