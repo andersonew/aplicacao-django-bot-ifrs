@@ -2,7 +2,7 @@
 FROM python:3.10
 
 # set working directory to /app/
-WORKDIR .
+WORKDIR ./aplicacao
 
 USER root
 
@@ -11,6 +11,6 @@ RUN pip install psycopg2
 RUN pip install psycopg2-binary
 RUN pip install Pillow
 
-ADD . .
+ADD . ./aplicacao
 
-RUN manage.py runserver 0.0.0.0:8080
+RUN python manage.py runserver 0.0.0.0:8080
