@@ -1,18 +1,15 @@
-# use base python image with python 2.7
-FROM python:3.10
+FROM python:3.8
 
-# set working directory to /app/
-WORKDIR .
-USER root
+WORKDIR /app
 
-RUN pip install Django
-RUN pip install psycopg2
-RUN pip install psycopg2-binary
-RUN pip install Pillow
+ADD requirements.txt requirements.txt
 
-ADD . .
-USER root
+ADD main.py main.py
 
-RUN python manage.py runserver
+RUN pip install -r requirements.txt
 
-USER 1001
+ADD app app
+
+EXPOSE 8080
+
+CMD ["python", "manage.py", "runserver"]
