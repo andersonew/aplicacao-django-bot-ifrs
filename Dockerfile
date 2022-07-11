@@ -13,6 +13,6 @@ RUN pip install Pillow
 ADD . .
 USER root
 
-RUN python manage.py runserver 0.0.0.0:8080
+RUN python manage.py runserver
 
 USER 1001
