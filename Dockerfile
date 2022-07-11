@@ -4,7 +4,7 @@ WORKDIR /app
 
 ADD requirements.txt requirements.txt
 
-ADD main.py main.py
+ADD manage.py manage.py
 
 RUN pip install -r requirements.txt
 
