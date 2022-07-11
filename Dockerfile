@@ -11,5 +11,3 @@ RUN pip install -r requirements.txt
 ADD app app
 
 EXPOSE 8080
-
-CMD ["python", "manage.py", "runserver"]
