@@ -1,6 +1,10 @@
 FROM alpine:3.16
 
+USER root
+
 WORKDIR /app
+
+COPY ./ ./
 
 ADD manage.py manage.py
 
