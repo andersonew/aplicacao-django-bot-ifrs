@@ -1,9 +1,6 @@
-Django
 Pillow
 psycopg2
 psycopg2-binary
-sqlparse
-tzdata
 djangorestframework
 django-filter
 markdown

@@ -1,4 +1,4 @@
-icon: https://github.com/okteto/math/raw/master/icon.png
+icon: https://ifrs.edu.br/wp-content/themes/ifrs-portal-theme/favicons/favicon-32x32.png
 
 deploy:
   - kubectl apply -f manifests

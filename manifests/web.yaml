@@ -17,11 +17,6 @@ spec:
       - name: web
         image: okteto/django:latest
         command: ["./run_web.sh"]
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"        
-
 ---
 
 apiVersion: v1
@@ -34,6 +29,6 @@ spec:
   type: ClusterIP  
   ports:
   - name: web
-    port: 8080
+    port: 8000
   selector:
     app: web
