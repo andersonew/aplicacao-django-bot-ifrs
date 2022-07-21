@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
       - name: web
-        image: okteto/python:latest
+        image: okteto/python
         command: ["./run_web.sh"]
 ---
 
