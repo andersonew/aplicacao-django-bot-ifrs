@@ -23,7 +23,7 @@ RUN pip install markdown
 
 RUN pip install Pillow
 
-RUN apk add psycopg2
+RUN pip install psycopg2-binary
 
 ADD app app
 
