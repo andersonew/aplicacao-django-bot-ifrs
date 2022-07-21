@@ -16,7 +16,7 @@ spec:
       containers:
       - name: web
         image: ubuntu
-        command: ["python3", "manage.py", "runserver", "8080"]
+        command: ["python3 manage.py runserver 8080"]
 ---
 
 apiVersion: v1
