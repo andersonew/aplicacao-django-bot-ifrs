@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>IFRS - UPDATE TO BOT</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-
-    </head>
-    <body>
-        <h1>IFRS - Campus Rio Grande</h1>
-
-        <h2>Informações Atuais:</h2>
-       
-        <script src="" async defer></script>
-    </body>
-</html>
+{% load static %}
+{% include 'partials/header.html' %}
+<body>
+    <table>
+        {% include 'partials/login-admin.html' %}
+        <tr>
+            <td></td>
+            <td><center><h1>TODOS EVENTOS</h1></center><br><br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><section>
+                <div>
+                    {% include 'partials/organizador.html' %}
+                </div>
+            </section></td>
+        </tr>
+    </table>
+{% include 'partials/footer.html' %}

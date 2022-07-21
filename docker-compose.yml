@@ -1,14 +1,27 @@
-version: "3"
-
+version: '3.0'
 services:
-  principal:
+  web:
+    image: okteto/django:latest
     build: .
-    ports:
-      - 8080:8080
+    command: ./run_web.sh
     volumes:
-      - ./:/app
-    command:
-      - python
-      - manage.py
-      - runserver
-      - 0.0.0.0:8080
+      - .:/app
+    ports:
+      - "8080:8080"
+
+  worker:
+    image: okteto/django:latest
+    build: .
+    command: ./run_celery.sh
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:9.4
+    hostname: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=ifrs
+    ports:
+      - "5432:5432"

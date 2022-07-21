@@ -21,12 +21,15 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'app',
+    'api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'markdown',    
 ]
 
 MIDDLEWARE = [
@@ -65,14 +68,14 @@ WSGI_APPLICATION = 'principal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('ifrs'),
-        'USER': os.environ.get('anderson.direito@gmail.com'),
-        'PASSWORD': os.environ.get('123456'),
-        'HOST': os.environ.get('DB_PORT_5432_TCP_ADDR', 'bancodedados'),
-        'PORT': os.environ.get(5432),
-    },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ifrs',
+        'USER': 'postgres',
+        'PASSWORD':'123456',
+        'HOST':'localhost'
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -113,6 +116,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, 'principal/static')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
