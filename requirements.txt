@@ -1,4 +1,3 @@
-sgiref
 Django
 Pillow
 psycopg2
