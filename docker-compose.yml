@@ -2,8 +2,14 @@ version: '3.0'
 services:
   web:
     image: okteto/ubuntu:latest
-    build: .
-    command: ['python3 manage.py runserver 8080']
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+      python3
+      manage.py
+      runserver
+      8080
     volumes:
       - .:/app
     ports:
