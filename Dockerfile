@@ -23,6 +23,8 @@ RUN pip install markdown
 
 RUN pip install Pillow
 
+RUN apk add psycopg2
+
 ADD app app
 
 EXPOSE 8080
