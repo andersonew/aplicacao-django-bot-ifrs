@@ -15,8 +15,8 @@ services:
     image: postgres:9.4
     hostname: db
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_USER=okteto
+      - POSTGRES_PASSWORD=okteto
+      - POSTGRES_DB=okteto
     ports:
       - "5432:5432"
