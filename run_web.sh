@@ -11,5 +11,5 @@ echo "Database is ready"
 cd app
 
 # start development server on public ip interface, on port 8000
-python manage.py runserver 8080
+python3 manage.py runserver 8080
 
