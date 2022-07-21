@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\sprint5\aplicacao-django-bot-ifrs\venv
+set VIRTUAL_ENV=C:\Users\ander\OneDrive\Desktop\aplicacao-django-bot-ifrs\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

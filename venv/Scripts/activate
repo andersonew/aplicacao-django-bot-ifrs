@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\sprint5\aplicacao-django-bot-ifrs\venv"
+VIRTUAL_ENV="C:\Users\ander\OneDrive\Desktop\aplicacao-django-bot-ifrs\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
