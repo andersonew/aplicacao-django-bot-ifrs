@@ -15,13 +15,3 @@ services:
     command: ./run_celery.sh
     volumes:
       - .:/app
-
-  db:
-    image: postgres:9.4
-    hostname: db
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=ifrs
-    ports:
-      - "5432:5432"
