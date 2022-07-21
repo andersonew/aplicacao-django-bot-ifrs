@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
       - name: web
-        image: okteto/alpine
+        image: ubuntu
         command: ["./run_web.sh"]
 ---
 
