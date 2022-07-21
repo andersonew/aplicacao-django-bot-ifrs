@@ -25,6 +25,8 @@ RUN pip install Pillow
 
 RUN pip install psycopg2-binary
 
+RUN pip install psycopg2 --ignore-installed
+
 ADD app app
 
 EXPOSE 8080
