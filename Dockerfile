@@ -13,11 +13,11 @@ ADD manage.py manage.py
 
 USER root
 
-RUN apt install python3-django
+RUN pip install django
 
-RUN apt install python3-djangorestframework
+RUN pip install djangorestframework
 
-RUN apt install python3-psycopg2
+RUN pip install psycopg2
 
 RUN pip install Pillow
 
