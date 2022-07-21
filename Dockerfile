@@ -17,7 +17,9 @@ RUN pip install django
 
 RUN pip install djangorestframework
 
-RUN pip install psycopg2
+RUN pip install django-filter
+
+RUN pip install markdown
 
 RUN pip install Pillow
 
