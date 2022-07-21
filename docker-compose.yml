@@ -3,7 +3,7 @@ services:
   web:
     image: okteto/ubuntu:latest
     build: .
-    command: ['python manage.py runserver 8080']
+    command: ['python3', 'manage.py', 'runserver', '8080']
     volumes:
       - .:/app
     ports:
