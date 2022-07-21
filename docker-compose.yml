@@ -1,13 +1,13 @@
 version: '3.0'
 services:
   web:
-    image: okteto/anaconda:latest
+    image: okteto/ubuntu:latest
     build: .
     command: ./run_web.sh
     volumes:
       - .:/app
     ports:
-      - "8000:8080"
+      - "8080:8080"
     depends_on:
       - db
   

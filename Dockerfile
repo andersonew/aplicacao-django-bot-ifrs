@@ -2,11 +2,19 @@ FROM python:3.10
 
 WORKDIR /app
 
-ADD requirements.txt requirements.txt
-
 ADD manage.py manage.py
 
-RUN pip install -r requirements.txt
+RUN sudo apt install python3-pip
+
+RUN sudo apt-get update
+
+RUN sudo apt install python3-django
+
+RUN sudo apt install python3-djangorestframework
+
+RUN sudo apt install python3-psycopg2
+
+RUN pip install Pillow
 
 ADD app app
 
