@@ -8,8 +8,6 @@ COPY ./ ./
 
 ADD manage.py manage.py
 
-RUN sudo apt install python3-pip
-
 RUN sudo apt-get update
 
 RUN sudo apt install python3-django
