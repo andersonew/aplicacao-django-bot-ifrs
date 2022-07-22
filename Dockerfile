@@ -12,7 +12,7 @@ RUN apt-get update
 
 RUN apt install -y python3-pip
 
-RUN python -m pip install -r requirements.txt
+RUN python3 -m pip install -r requirements.txt
 
 RUN pip freeze
 
