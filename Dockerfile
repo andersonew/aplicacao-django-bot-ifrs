@@ -10,9 +10,7 @@ USER root
 RUN apt-get update && apt-get install -y python3.10
 RUN apt-get update
 
-RUN apt install python3.8-venv
-RUN python3 -m venv ./venv
-RUN source venv/bin/activate
+RUN apt install python3-pip
 
 RUN python -m pip install -r requirements.txt
 
