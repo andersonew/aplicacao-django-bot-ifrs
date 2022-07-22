@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -y python3.10
 
 RUN apt-get update
 
-RUN python -m venv ./venv
+RUN python3 -m venv ./venv
 RUN source venv/bin/activate
 
-RUN python3 -m pip install -r requirements.txt
+RUN python -m pip install -r requirements.txt
 
 RUN pip freeze
 
