@@ -14,6 +14,8 @@ ADD manage.py manage.py
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
 
+RUN sudo apt install libpq-dev
+
 RUN pip install django
 
 RUN pip install djangorestframework
