@@ -2,8 +2,6 @@ FROM ubuntu:latest
 
 USER root
 
-RUN sudo apt install python3-pip
-
 WORKDIR /app
 COPY ./ ./
 
