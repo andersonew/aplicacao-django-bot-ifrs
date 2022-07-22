@@ -7,7 +7,8 @@ COPY ./ ./
 
 ADD manage.py manage.py
 
-RUN apt-get install python3
+RUN sudo apt update
+RUN sudo apt install python3-pip
 
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
