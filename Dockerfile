@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:3-alpine
 
 USER root
 
@@ -6,9 +6,6 @@ WORKDIR /app
 COPY ./ ./
 
 ADD manage.py manage.py
-
-RUN sudo apt update
-RUN sudo apt install python3-pip
 
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
