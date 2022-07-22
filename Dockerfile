@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.10.5-windowsservercore-ltsc2022
 
 USER root
 
@@ -8,7 +8,7 @@ COPY ./ ./
 ADD manage.py manage.py
 
 RUN python3 -m venv tutorial-env
-RUN venv/Scripts/activate.bat
+RUN source tutorial-env/bin/activate
 
 RUN python -m pip install -r requirements.txt
 
