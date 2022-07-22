@@ -7,7 +7,7 @@ COPY ./ ./
 
 ADD manage.py manage.py
 
-RUN apt-get update && apt-get install -y python3.10 python3-venv
+RUN apt-get update && apt-get install -y python3.10
 
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
