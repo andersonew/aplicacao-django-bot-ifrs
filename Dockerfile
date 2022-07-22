@@ -8,11 +8,8 @@ ADD manage.py manage.py
 USER root
 
 RUN apt-get update && apt-get install -y python3.10
-RUN apt-get update
 
-RUN apt install -y python3-pip
-
-RUN apt install -y python3-django && 2
+RUN apt install -y python3-django
 RUN apt install -y python3-djangorestframework
 RUN apt install -y python3-psycopg2
 RUN python3 pip install Pillow
