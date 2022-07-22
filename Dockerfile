@@ -2,12 +2,15 @@ FROM ubuntu:latest
 
 USER root
 
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
+
 WORKDIR /app
 COPY ./ ./
 
 ADD manage.py manage.py
-
-RUN apt-get update && apt-get install -y python3.10
 
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
