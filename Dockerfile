@@ -10,7 +10,7 @@ ADD manage.py manage.py
 RUN apt-get update && apt-get install -y python3.10 python3-venv
 
 RUN python3 -m venv tutorial-env
-RUN venv/Scripts/activate.bat
+RUN source tutorial-env/bin/activate
 
 RUN python -m pip install -r requirements.txt
 
