@@ -1,4 +1,3 @@
-Python
 Django
 Pillow
 psycopg2
