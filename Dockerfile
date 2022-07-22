@@ -16,6 +16,10 @@ RUN source tutorial-env/bin/activate
 
 RUN pip install django
 
+RUN pip install -U pip
+
+USER root
+
 RUN pip install psycopg2
 
 RUN pip install psycopg2-binary
