@@ -7,6 +7,12 @@ COPY ./ ./
 
 ADD manage.py manage.py
 
+RUN CD app
+
+RUN apt-get update 
+
+RUN apt-get install python
+
 RUN python3 -m venv tutorial-env
 RUN venv/Scripts/activate.bat
 
