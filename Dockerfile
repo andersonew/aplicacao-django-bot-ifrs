@@ -2,9 +2,7 @@ FROM ubuntu:latest
 
 USER root
 
-RUN apt-get update && apt-get install -y python3.10
-
-RUN sudo apt-get install python3.10-venv
+RUN apt-get update && apt-get install -y python3.10 python3-pip
 
 WORKDIR /app
 COPY ./ ./
