@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update && apt-get install -y python3.8
 
-RUN apt-get update && apt-get install python3.8-venv
+RUN sudo apt-get install python3.8-venv
 
 WORKDIR /app
 COPY ./ ./
