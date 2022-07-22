@@ -26,6 +26,8 @@ RUN pip install Pillow
 
 RUN pip install psycopg2-binary
 
+RUN pip freeze
+
 ADD app app
 
 EXPOSE 8080
