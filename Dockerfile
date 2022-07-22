@@ -5,13 +5,17 @@ RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
 RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
 
+USER root
+
 WORKDIR /app
-
 COPY ./ ./
-
 ADD manage.py manage.py
 
-USER root
+RUN python3 -m venv tutorial-env
+RUN source tutorial-env/bin/activate
+
+
+
 
 RUN pip install django
 
@@ -25,7 +29,7 @@ RUN pip install Pillow
 
 RUN pip install psycopg2-binary
 
-RUN pip install psycopg2 --ignore-installed
+RUN pip install psycopg2
 
 ADD app app
 
