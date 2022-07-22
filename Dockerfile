@@ -9,7 +9,7 @@ ADD manage.py manage.py
 
 RUN apt-get update 
 
-RUN apt-get install python
+RUN apt-get install python3
 
 RUN python3 -m venv tutorial-env
 RUN venv/Scripts/activate.bat
