@@ -16,6 +16,10 @@ RUN source tutorial-env/bin/activate
 
 RUN pip install django
 
+RUN pip install psycopg2
+
+RUN pip install psycopg2-binary
+
 RUN pip install djangorestframework
 
 RUN pip install django-filter
@@ -24,11 +28,7 @@ RUN pip install markdown
 
 RUN pip install Pillow
 
-RUN pip install psycopg2-binary
-
 RUN pip freeze
-
-RUN DIR
 
 ADD app app
 
