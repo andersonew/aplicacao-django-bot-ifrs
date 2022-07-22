@@ -1,4 +1,4 @@
-FROM python:3.10.5-windowsservercore-ltsc2022
+FROM ubuntu:latest
 
 USER root
 
