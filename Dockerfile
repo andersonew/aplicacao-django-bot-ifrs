@@ -8,7 +8,7 @@ COPY ./ ./
 ADD manage.py manage.py
 
 RUN python3 -m venv tutorial-env
-RUN source tutorial-env/bin/activate
+RUN venv/Scripts/activate.bat
 
 RUN python -m pip install -r requirements.txt
 
