@@ -12,7 +12,7 @@ RUN apt-get update
 
 RUN apt install -y python3-pip
 
-RUN python3 pip install Django
+RUN sudo apt install python3-django
 RUN python3 pip install Pillow
 RUN python3 pip install psycopg2-binary
 RUN python3 pip install djangorestframework
