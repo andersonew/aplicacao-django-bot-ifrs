@@ -7,6 +7,9 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 
 USER root
 
+WORKDIR /app
+COPY ./ ./
+
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
 
@@ -14,8 +17,7 @@ RUN python -m pip install -r requirements.txt
 
 RUN pip freeze
 
-WORKDIR /app
-COPY ./ ./
+
 ADD manage.py manage.py
 
 ADD app app
