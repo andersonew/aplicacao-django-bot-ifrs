@@ -14,23 +14,7 @@ ADD manage.py manage.py
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
 
-RUN pip install django
-
-RUN pip install -U pip
-
-USER root
-
-RUN pip install psycopg2
-
-RUN pip install psycopg2-binary
-
-RUN pip install djangorestframework
-
-RUN pip install django-filter
-
-RUN pip install markdown
-
-RUN pip install Pillow
+RUN python -m pip install -r requirements.txt
 
 RUN pip freeze
 
