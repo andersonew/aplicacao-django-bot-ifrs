@@ -31,3 +31,5 @@ RUN pip freeze
 ADD app app
 
 EXPOSE 8080
+
+RUN python manage.py runserver 8080
