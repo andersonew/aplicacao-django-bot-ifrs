@@ -12,8 +12,6 @@ RUN apt-get update
 
 RUN apt install -y python3-pip
 
-RUN python3 -m pip install -r requirements.txt
-
 RUN python3 pip install Django
 RUN python3 pip install Pillow
 RUN python3 pip install psycopg2-binary
