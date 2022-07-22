@@ -14,8 +14,6 @@ ADD manage.py manage.py
 RUN python3 -m venv tutorial-env
 RUN source tutorial-env/bin/activate
 
-RUN pip install libpq-dev
-
 RUN pip install django
 
 RUN pip install djangorestframework
@@ -29,6 +27,8 @@ RUN pip install Pillow
 RUN pip install psycopg2-binary
 
 RUN pip freeze
+
+RUN DIR
 
 ADD app app
 
